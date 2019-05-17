@@ -1,0 +1,13 @@
+type Person{
+	id: String
+	name: String
+	age: String
+}
+type Query{
+  allPersons : [Person]
+  personById(id: String) : Person
+}
+
+type Mutation {
+    newPerson(id: String,name: String, age: String) : Person
+}
