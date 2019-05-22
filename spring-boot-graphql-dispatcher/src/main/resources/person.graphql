@@ -1,0 +1,23 @@
+schema{
+	query : Query
+	mutation : Mutation
+}
+
+type Query{
+	allPerson : [Person]
+	person(firstName:String) : Person
+}
+
+type Person{
+	id : String
+	firstName : String
+	lname : String
+	age : Int
+}
+
+type Mutation {
+  createPerson(
+  		firstName: String!
+  		lname: String!
+  		age : Int) : Person
+}
